@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="boxicons/css/boxicons.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="contact.css">
+  <title>Login & Registration</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="menu-btn">
+    </div>
+    <nav class="nav">
+      <div class="nav-logo">
+        <img class="topimage" src="logo.jpg" alt="travel logo">
+      </div>
+      <div class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="index.html" class="link">Home</a></li>
+          <li><a href="gallery.html" class="link">Gallery</a></li>
+          <li><a href="room.html" class="link">Room</a></li>
+          <li><a href="contact.html" class="link active">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-button">
+      </div>
+      <div class="nav-menu-btn">
+        <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+      </div>
+    </nav>
+
+  </div>
+  <!-- Header End -->
+
+
+  <section>
+    <div id="contact-form">
+      <div>
+        <h1>Nice to Meet You!</h1>
+        <h4>Have a question or just want to get in touch? Let's chat.</h4>
+      </div>
+      <p id="failure">Oopsie...message not sent.</p>
+      <p id="success">Your message was sent successfully. Thank you!</p>
+
+    <form id="form" method="POST" action="user.php">
+        <div>
+          <label for="name">
+            <span class="required">Name: *</span>
+            <input type="text" id="name" name="name" value="" placeholder="Your Name" required="required" tabindex="1" autofocus="autofocus" />
+          </label>
+        </div>
+        <div>
+          <label for="email">
+            <span class="required">Email: *</span>
+            <input type="email" id="email" name="email" value="" placeholder="Your Email" tabindex="2" required="required" />
+          </label>
+        </div>
+        <div>
+          <label for="subject">
+            <span>Subject: </span>
+            <select id="subject" name="subject" tabindex="4">
+              <option value="hello">Select anyone</option>
+              <option value="general">Stuck with system</option>
+              <option value="general">Suggestions Requirement</option>
+              <option value="general">Package clarification</option>
+              <option value="general">Login and Register Problem</option>
+              <option value="general">Other Problems</option>
+
+            </select>
+          </label>
+        </div>
+        <div>
+          <label for="message">
+            <span class="required">Message: *</span>
+            <textarea id="message" name="message" placeholder="Please write your message here." tabindex="5" required="required"></textarea>
+          </label>
+        </div>
+        <div>
+          <button name="submit" type="submit" id="submit">SEND</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the form element
+      var form = document.getElementById("form");
+
+      // Attach a submit event listener to the form
+      form.addEventListener("submit", function(event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Show the pop-up message
+        alert("We will get to you shortly.");
+
+        // Clear the form data
+        form.reset();
+
+        // Reload the page after a short delay
+        setTimeout(function() {
+          location.reload();
+        }, 1000);
+      });
+    });
+  </script>
+
+</body>
+
+</html>

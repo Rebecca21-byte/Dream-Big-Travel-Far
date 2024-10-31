@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dream Big Travel Far</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <link href="css/booking.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <h1 class="text-center">Plaza Hotel</h1>
+    <p class="subtitle text-center">Book Your Room Today</p>
+
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-md-6">
+          <div class="content-form">
+            <form id="bookingform" class="input-group" action=" " method="POST">
+              <div class="form-group">
+                <label for="txtName" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="txtName" name="txtName" placeholder="Name" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="txtLName" class="col-sm-2 control-label">Last Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="txtLName" name="txtLName" placeholder="Last Name" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="txtRoom" class="col-sm-2 control-label">Room</label>
+                <div class="col-sm-10">
+                  <input type="number" min="1" max="20" id="txtRoom" name="txtRoom" class="form-control" placeholder="Room" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="txtCheckIn" class="col-sm-2 control-label">Check In</label>
+                <div class="col-sm-10">
+                  <input type="date" id="txtCheckIn" name="txtCheckIn" class="form-control" placeholder="Check In" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="txtCheckOut" class="col-sm-2 control-label">Check Out</label>
+                <div class="col-sm-10">
+                  <input type="date" id="txtCheckOut" name="txtCheckOut" class="form-control" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="txtAdult" class="col-sm-2 control-label">Adults</label>
+                <div class="col-sm-10">
+                  <input type="number" max="100" id="txtAdult" name="txtAdult" min="1" class="form-control" placeholder="Adults" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="txtChildren" class="col-sm-2 control-label">Children</label>
+                <div class="col-sm-10">
+                  <input type="number" max="100" id="txtChildren" name="txtChildren" min="1" class="form-control" placeholder="Children" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="txtTotalPrice" class="col-sm-2 control-label">Total Price</label>
+              <div class="col-sm-10">
+                  <input type="number" min="1" max="20" id="txtTotalPrice" name="txtTotalPrice" class="form-control" placeholder="Total Price" readonly required />
+                </div>
+              </div>
+
+              <div class="button-container">
+                <button type="button" class="btn btn-warning btn-lg" id="returnBtn">
+                  <a class="btn btn-sm btn-dark rounded py-2 px-4" href="room.html">Return</a>
+                </button>
+                <button type="submit" class="btn btn-warning btn-lg" id="paymentBtn">
+                  <a class="btn btqn-sm btn-dark rounded py-2 px-4">Book</a>
+                </button>
+              </div>
+              <!-- Display the total price here -->
+              <div id="totalPriceDisplay" class="text-center mt-3"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('bookingform').addEventListener('input', function () {
+      // Get the values of adults and children
+      var adults = document.getElementById('txtAdult').value;
+      var children = document.getElementById('txtChildren').value;
+
+      // Calculate the total price
+      var totalPrice = (adults * 100) + (children * 50);
+
+      // Update the total price input field
+      document.getElementById('txtTotalPrice').value = totalPrice;
+
+      // Display the total price
+      document.getElementById('totalPriceDisplay').innerText = 'Total Price: $' + totalPrice;
+    });
+  </script>
+</body>
+
+</html>

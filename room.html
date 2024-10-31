@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dream Big Travel Far</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container-xxl bg-white p-0">
+
+    <!-- Header Start -->
+    <div class="wrapper">
+      <div class="menu-btn">
+      </div>
+      <nav class="nav">
+        <div class="nav-logo">
+          <img class="topimage" src="logo.jpg" alt="travel logo">
+        </div>
+        <div class="nav-menu" id="navMenu">
+          <ul>
+            <li><a href="index.html" class="link">Home</a></li>
+            <li><a href="gallery.html" class="link">Gallery</a></li>
+            <li><a href="room.html" class="link active">Room</a></li>
+            <li><a href="contact.html" class="link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="nav-button">
+        </div>
+        <div class="nav-menu-btn">
+          <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
+      <div class="container-fluid page-header-inner py-5">
+        <div class="container text-center pb-5">
+          <h1 class="display-3 text-white mb-3 animated slideInDown">Rooms</h1>
+          <nav aria-label="breadcrumb">
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Booking Start -->
+    <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container">
+        <div class="bg-white shadow rounded p-4">
+          <div class="row g-3">
+            <div class="container-xxl" style="padding-bottom:0;">
+              <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                  <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search by hotel name">
+                </div>
+                <div class="form-group">
+                  <div class="grid">
+                    <div class="date-container">
+                      <div class="date-input">
+                        <input type="date" id="arrive" name="arrive" value="<?php echo date('Y-m-d'); ?>" required>
+                        <label for="arrive">Arrival Date</label>
+                      </div>
+                      <div class="date-input">
+                        <input type="date" id="depart" name="depart" value="<?php echo date('Y-m-d'); ?>" required>
+                        <label for="depart">Departure Date</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid">
+            </div>
+            <div class="col-md-1">
+              <button id="addAdult" class="btn btn-secondary w-100 rounded">Add Adult</button>
+            </div>
+            <div class="col-md-1">
+              <button id="addChild" class="btn btn-secondary w-100 rounded">Add Child</button>
+            </div>
+            <div class="col-md-12 mt-3">
+              <button id="submitBtn" class="btn btn-primary w-100 rounded">Submit</button>
+            </div>
+
+
+            <!-- Display total count -->
+            <div id="totalCount" class="mt-3 text-center">Total: 0 (Adults: 0, Children: 0)</div>
+
+            <div id="individualCounts" class="mt-3 text-center"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Booking End -->
+
+      <!-- Booking End -->
+
+
+      <!-- Room Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title text-center text-primary text-uppercase">Our Rooms</h6>
+            <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Rooms</span></h1>
+          </div>
+          <div class="row g-4">
+            <!--room1-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/Langham.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Plaza Hotel,USA</h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>4 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pe-1"><i class="fas fa-swimming-pool text-primary me-2"></i>Pool</small>
+                      <small class="border-bottom mb-2 pe-1"><i class="fas fa-tshirt text-primary me-2"></i>Laundry</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness Club</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">Located at Fifth Avenue and Central Park South in Manhattan, The Plaza is a historic and luxurious hotel known for its opulent décor and prestigious location.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="plaza-hotel.html">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--room2-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/resort.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">The Breakers,USA</h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>3 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast(free)</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pe-1"><i class="fas fa-swimming-pool text-primary me-2"></i>Pool</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness Club</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">A grand resort and historic hotel in Palm Beach, The Breakers is known for its Mediterranean Revival architecture and oceanfront setting.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--room3-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/hotel-3.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">The Bellagio,USA</h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>3 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom md-2 pb-1" style="margin-bottom: 8px;"><i class="fa fa-paw text-primary me-2"></i>Pet-Friendly</small>
+                      <small class="border-bottom mb-2 pe-1" style="margin-bottom: 8px; border-bottom:1px; padding-bottom:4px"><i class="fas fa-tshirt text-primary me-2"></i>Laundry</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness Club</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">Another iconic hotel in Las Vegas, The Bellagio is known for its famous fountains, upscale accommodations, and world-class entertainment.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--room 4-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/hotel-4.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Fairmont(BS),Canada </h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-hotel text-primary me-2"></i>5 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pe-1"><i class="fas fa-swimming-pool text-primary me-2"></i>Pool</small>
+                      <small class="border-bottom mb-2 pe-1"><i class="fas fa-tshirt text-primary me-2"></i>Laundry</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness</small>
+                    </div>
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-tv text-primary me-2"></i>Flat TV</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>Beds</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-utensils text-primary me-2"></i>Room Service</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--room1-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/hotel-6.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Ritz-Carlton,Canada </h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>4 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pe-1"><i class="fas fa-swimming-pool text-primary me-2"></i>Pool</small>
+                      <small class="border-bottom mb-2 pe-1"><i class="fas fa-tshirt text-primary me-2"></i>Laundry</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness Club</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">It revolutionised the luxury hotel experience — using modern innovations like electric lights, hydraulic lifts, and air conditioning.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--room2-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/resort.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">4 Seasons Resort,USA</h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>3 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast(free)</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pe-1"><i class="fas fa-swimming-pool text-primary me-2"></i>Pool</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness Club</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--room3-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/hotel-3.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Hay-Adams,USA</h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>3 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom md-2 pb-1" style="margin-bottom: 8px;"><i class="fa fa-paw text-primary me-2"></i>Pet-Friendly</small>
+                      <small class="border-bottom mb-2 pe-1" style="margin-bottom: 8px; border-bottom:1px; padding-bottom:4px"><i class="fas fa-tshirt text-primary me-2"></i>Laundry</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness Club</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--room3-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/hotel-3.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Hay-Adams,USA</h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>3 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom md-2 pb-1" style="margin-bottom: 8px;"><i class="fa fa-paw text-primary me-2"></i>Pet-Friendly</small>
+                      <small class="border-bottom mb-2 pe-1" style="margin-bottom: 8px; border-bottom:1px; padding-bottom:4px"><i class="fas fa-tshirt text-primary me-2"></i>Laundry</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness Club</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--room3-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/hotel-3.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Hay-Adams,USA</h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>3 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom md-2 pb-1" style="margin-bottom: 8px;"><i class="fa fa-paw text-primary me-2"></i>Pet-Friendly</small>
+                      <small class="border-bottom mb-2 pe-1" style="margin-bottom: 8px; border-bottom:1px; padding-bottom:4px"><i class="fas fa-tshirt text-primary me-2"></i>Laundry</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness Club</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--room3-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/hotel-3.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Hay-Adams,USA</h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>3 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom md-2 pb-1" style="margin-bottom: 8px;"><i class="fa fa-paw text-primary me-2"></i>Pet-Friendly</small>
+                      <small class="border-bottom mb-2 pe-1" style="margin-bottom: 8px; border-bottom:1px; padding-bottom:4px"><i class="fas fa-tshirt text-primary me-2"></i>Laundry</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness Club</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--room3-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/hotel-3.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Hay-Adams,USA</h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>3 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom md-2 pb-1" style="margin-bottom: 8px;"><i class="fa fa-paw text-primary me-2"></i>Pet-Friendly</small>
+                      <small class="border-bottom mb-2 pe-1" style="margin-bottom: 8px; border-bottom:1px; padding-bottom:4px"><i class="fas fa-tshirt text-primary me-2"></i>Laundry</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness Club</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--room3-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/hotel-3.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Hay-Adams,USA</h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>3 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom md-2 pb-1" style="margin-bottom: 8px;"><i class="fa fa-paw text-primary me-2"></i>Pet-Friendly</small>
+                      <small class="border-bottom mb-2 pe-1" style="margin-bottom: 8px; border-bottom:1px; padding-bottom:4px"><i class="fas fa-tshirt text-primary me-2"></i>Laundry</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness Club</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--room3-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/hotel-3.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Hay-Adams,USA</h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>3 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom md-2 pb-1" style="margin-bottom: 8px;"><i class="fa fa-paw text-primary me-2"></i>Pet-Friendly</small>
+                      <small class="border-bottom mb-2 pe-1" style="margin-bottom: 8px; border-bottom:1px; padding-bottom:4px"><i class="fas fa-tshirt text-primary me-2"></i>Laundry</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness Club</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--room3-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/hotel-3.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Hay-Adams,USA</h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>3 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom md-2 pb-1" style="margin-bottom: 8px;"><i class="fa fa-paw text-primary me-2"></i>Pet-Friendly</small>
+                      <small class="border-bottom mb-2 pe-1" style="margin-bottom: 8px; border-bottom:1px; padding-bottom:4px"><i class="fas fa-tshirt text-primary me-2"></i>Laundry</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness Club</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--room3-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="room-item shadow rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/hotel/hotel-3.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                  <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
+                </div>
+                <div class="p-4 mt-2">
+                  <div class="d-flex justify-content-between mb-3">
+                    <h5 class="mb-0">Hay-Adams,USA</h5>
+                    <div class="ps-2">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-3">
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom mb-2 pb-1"><i class="fa fa-bed text-primary me-2"></i>3 star</small>
+                      <small class="border-bottom mb-2 pb-1"><i class="fas fa-coffee text-primary me-2"></i>Breakfast</small>
+                      <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                    </div>
+                    <div class="d-flex flex-column me-3 pe-3">
+                      <small class="border-bottom md-2 pb-1" style="margin-bottom: 8px;"><i class="fa fa-paw text-primary me-2"></i>Pet-Friendly</small>
+                      <small class="border-bottom mb-2 pe-1" style="margin-bottom: 8px; border-bottom:1px; padding-bottom:4px"><i class="fas fa-tshirt text-primary me-2"></i>Laundry</small>
+                      <small style="margin-bottom: 8px;"><i class="fas fa-dumbbell text-primary me-2"></i>Fitness Club</small>
+                    </div>
+                  </div>
+                  <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                  <div class="d-flex justify-content-between">
+                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                    <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Room End -->
+
+      <!-- Newsletter Start -->
+      <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 border rounded p-1">
+            <div class="border rounded text-center p-1">
+              <div class="bg-white rounded text-center p-5">
+                <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span></h4>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                  <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                  <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Newsletter Start -->
+
+
+      <!-- Footer Start -->
+      <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+        <div class="container pb-5">
+          <div class="row g-5">
+            <div class="col-md-6 col-lg-4">
+              <div class="bg-primary rounded p-4">
+                <a href="index.html">
+                  <h1 class="text-white text-uppercase mb-3">Dream Big travel Far</h1>
+                </a>
+                <p class="text-white mb-0">
+                  Download <a class="text-dark fw-medium" href="https://htmlcodex.com/hotel-html-template-pro">DBTF – Premium Version</a>, build a professional website for your hotel business and grab the attention of new visitors upon your site’s
+                  launch.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
+              <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+              <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+              <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+              <div class="row gy-5 g-4">
+                <div class="col-md-6">
+                  <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
+                  <a class="btn btn-link" href="">About Us</a>
+                  <a class="btn btn-link" href="">Contact Us</a>
+                  <a class="btn btn-link" href="">Privacy Policy</a>
+                  <a class="btn btn-link" href="">Terms & Condition</a>
+                  <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-md-6">
+                  <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
+                  <a class="btn btn-link" href="">Food & Restaurant</a>
+                  <a class="btn btn-link" href="">Spa & Fitness</a>
+                  <a class="btn btn-link" href="">Sports & Gaming</a>
+                  <a class="btn btn-link" href="">Event & Party</a>
+                  <a class="btn btn-link" href="">GYM & Yoga</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+              </div>
+              <div class="col-md-6 text-center text-md-end">
+                <div class="footer-menu">
+                  <a href="">Home</a>
+                  <a href="">Cookies</a>
+                  <a href="">Help</a>
+                  <a href="">FQAs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+            // ... (your existing code)
+
+            // Function to filter rooms based on search input
+            function filterRooms() {
+              const searchInput = document.getElementById('searchInput').value.toLowerCase();
+              const roomContainer = document.getElementById('roomContainer');
+              const roomCards = roomContainer.querySelectorAll('.room-item');
+
+              roomCards.forEach(card => {
+                const hotelName = card.querySelector('.mb-0').textContent.toLowerCase();
+                if (hotelName.includes(searchInput)) {
+                  card.style.display = 'block';
+                } else {
+                  card.style.display = 'none';
+                }
+              });
+            }
+
+            // Event listener for "Submit" button
+            document.getElementById('submitBtn').addEventListener('click', function() {
+              filterRooms();
+            });
+
+
+            document.addEventListener('DOMContentLoaded', function() {
+              // Initial count
+              let adultCount = 0;
+              let childCount = 0;
+
+              // Function to update total count
+              function updateTotalCount() {
+                const totalCountElement = document.getElementById('totalCount');
+                totalCountElement.textContent = `Total: ${adultCount + childCount} (Adults: ${adultCount}, Children: ${childCount})`;
+              }
+
+              // Function to update individual counts
+              function updateIndividualCounts() {
+                const individualCountsElement = document.getElementById('individualCounts');
+                individualCountsElement.textContent = `Adults: ${adultCount}, Children: ${childCount}`;
+              }
+
+              // Event listener for "Add Adult" button
+              document.getElementById('addAdult').addEventListener('click', function() {
+                adultCount++;
+                updateTotalCount();
+                updateIndividualCounts();
+              });
+
+              // Event listener for "Add Child" button
+              document.getElementById('addChild').addEventListener('click', function() {
+                childCount++;
+                updateTotalCount();
+                updateIndividualCounts();
+              });
+
+              // Event listener for "Remove Adult" button
+
+              // Event listener for "Submit" button (you can add your logic here)
+              document.getElementById('submitBtn').addEventListener('click', function() {
+                // Add your submission logic here
+              });
+            });
+    </script>
+
+
+</body>
+
+</html>

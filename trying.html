@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="trying.css">
+  <link rel="icon" href="logo.jpg">
+  <title>Document</title>
+</head>
+<body>
+    <video poster=" " autoplay playsinline muted loop>
+
+        <source src="pictures\login.mp4" type="video/mp4">
+      </video>
+
+    <div class="video">
+        <div class="form">
+            <div class="button">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="loginform()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="signupform()">Sign Up</button>
+            </div>
+
+
+            <form id="loginform" class="input-group" action="signin.php" method="POST">
+                <input type="email" class="input-field" placeholder="E-mail" name ="email" required />
+                <input type="password" class="input-field" placeholder="Password" name ="password" required />
+                <p class="Fpass"><a href="forget.html">Forgot Password</a></p>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+
+
+              <form id="signupform" class="input-group" action="signup.php" method="POST">
+                <input type="text" class="input-field" placeholder="Username" name ="username" required />
+                <input type="email" class="input-field" placeholder="E-mail" name ="email" required />
+                <input type="password" class="input-field" placeholder="Password" name ="password" required />
+
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+          var x = document.getElementById("loginform");
+          var y = document.getElementById("signupform");
+          var z = document.getElementById("btn");
+
+          function signupform() {
+              x.style.left = "-400px";
+              y.style.left = "50px";
+              z.style.left = "110px";
+          }
+
+          function loginform() {
+              x.style.left = "50px";
+              y.style.left = "450px";
+              z.style.left = "0";
+          }
+
+      </script>
+</body>
+</html>
+https://kissasian.cz/drama/the-escape-of-the-seven-war-for-survival-2023-episode-15
